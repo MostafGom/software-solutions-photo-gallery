@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+    <title>Responsive Navbar</title>
+  </head>
+
+  <body>
+    <div class="nav-container">
+      <nav class="navbar">
+        <h1 id="navbar-logo">LOGINO</h1>
+
+        <div class="menu-toggle" id="mobile-menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+
+        <ul class="nav-menu">
+          <li><a href="#" class="nav-links">Home</a></li>
+          <li><a href="#" class="nav-links">About Us</a></li>
+          <li><a href="#" class="nav-links">Services</a></li>
+          <li><a href="#" class="nav-links">Contact Us</a></li>
+          <li><a href="#" class="nav-links nav-links-btn">Sign Up</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="main">
+      <div class="main-container">
+        <!-- Text content -->
+        <div class="main-content">
+          <h1>Lorem ipsum dolor sit.</h1>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam fugiat, eum voluptatem impedit hic velit
+            magnam ipsum explicabo officiis .</p>
+
+          <buton class="main-btn"><a href="#">Get Started</a></buton>
+        </div>
+        <!-- Image display -->
+        <div class="main-img-container">
+          <img src="images/main-img.svg" alt="main image" id="main-img">
+        </div>
+
+      </div>
+    </div>
+
+    <div class="modal" id="email-modal">
+      <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <div class="modal-content-left">
+          <img id='modal-img' src="images/email.svg" alt="send email">
+        </div>
+
+        <div class="modal-content-right">
+          <form action="/" class="modal-form" id="form">
+            <h1>Get Started Now! Create your account by filliong out this form</h1>
+
+            <div class="form-validations">
+              <input type="text" class="modal-input" id="name" name="name" placeholder="Enter your name">
+              <p>Error messege</p>
+            </div>
+
+            <div class="form-validations">
+              <input type="email" class="modal-input" id="email" name="email" placeholder="Enter your email">
+              <p>Error messege</p>
+            </div>
+
+            <div class="form-validations">
+              <input type="password" class="modal-input" id="password" name="password"
+                placeholder="Enter your password">
+              <p>Error messege</p>
+            </div>
+
+            <div class="form-validations">
+              <input type="password" class="modal-input" id="password-confirm" name="password confirmation"
+                placeholder="confirm your password">
+              <p>Error messege</p>
+            </div>
+
+            <input type="submit" class="modal-input-btn" value="Sign Up">
+            <span class="modal-input-login">Already have an account? Login <a href="#">here</a></span>
+          </form>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Services section -->
+    <div class="services-section">
+      <div class="services-heading">
+        <h1>Check out our Services</h1>
+      </div>
+
+      <div class="services">
+        <div class="service-cell">
+          <img src="images/1.jpg" alt="" class="services-cell_img">
+          <div class="services-cell_text">Back-End solutions</div>
+        </div>
+        <div class="service-cell">
+          <img src="images/2.jpg" alt="" class="services-cell_img">
+          <div class="services-cell_text">Front-End solutions</div>
+        </div>
+        <div class="service-cell">
+          <img src="images/3.jpg" alt="" class="services-cell_img">
+          <div class="services-cell_text">Digital design</div>
+        </div>
+        <div class="service-cell">
+          <img src="images/4.jpg" alt="" class="services-cell_img">
+          <div class="services-cell_text">Iot applications</div>
+        </div>
+        <div class="service-cell">
+          <img src="images/5.jpg" alt="" class="services-cell_img">
+          <div class="services-cell_text">Engineering solutions</div>
+        </div>
+        <div class="service-cell">
+          <img src="images/6.jpg" alt="" class="services-cell_img">
+          <div class="services-cell_text">Refactoring and rebuilding</div>
+        </div>
+        <div class="service-cell">
+          <img src="images/7.jpg" alt="" class="services-cell_img">
+          <div class="services-cell_text">Marketing and Advertisement</div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="footer-text">
+        &copy;Copyrights reserved 2021
+      </div>
+    </footer>
+    <script src="app.js"></script>
+  </body>
+
+</html>

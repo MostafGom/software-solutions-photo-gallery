@@ -1,0 +1,157 @@
+.services-section {
+  background-color: var(--darkgrey);
+  width: 100%;
+  height: auto;
+  min-height: 100vh;
+  padding-bottom: 8rem;
+
+}
+
+.services-heading {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: white;
+  padding-top: 3rem;
+}
+
+.services {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  transform: translateY(80px);
+  padding: 0;
+  background-color: var(--darkgrey);
+  height: auto;
+
+}
+
+.service-cell {
+  flex: 0 1 250px;
+  max-width: 250px;
+  height: 270px;
+  margin: 2px;
+  position: relative;
+  text-align: center;
+  z-index: 1;
+  box-shadow: 0 0 15px 0 rgb(0, 0, 0, 0.8);
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  cursor: pointer;
+}
+
+.services-cell_img {
+  object-fit: cover;
+  object-position: center;
+
+}
+
+.services-cell_text {
+  height: 100%;
+  width: 60%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-transform: uppercase;
+  color: white;
+  font-weight: 700;
+  font-size: 1rem;
+  transition: opacity 0.3s;
+  text-shadow: 2px 2px 2px var(--darkgrey);
+}
+
+.service-cell::before,
+.service-cell::after,
+.services-cell_img {
+  top: -50%;
+  width: 100%;
+  height: 200%;
+  display: block;
+  position: absolute;
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  z-index: -1;
+}
+
+.service-cell:hover {
+  opacity: 1;
+  transition: all 0.2s ease-in-out;
+  transform: scale(1.2);
+  z-index: 99;
+
+}
+
+.service-cell::before {
+  content: '';
+  position: absolute;
+  opacity: 0.4;
+  width: 350px;
+  height: 70px;
+  background: white;
+  top: 50;
+  left: 0;
+  z-index: 1;
+  transform: rotate(45deg);
+  transition: transform 1.2s;
+}
+
+.service-cell:hover::before {
+  transform: translate(-100px, 600%) rotate(45deg);
+  transition: transform .5s;
+}
+
+.img-window {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgb(0, 0, 0, 0.8);
+  z-index: 100;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.popup-img {
+  max-height: 80vh;
+  max-width: 80vw;
+  z-index: 200;
+}
+
+.img-btn-next,
+.img-btn-prev {
+  display: block;
+  font-size: 2rem;
+  padding: 10px 20px;
+  border-radius: 5px;
+  background-color: black;
+  position: fixed;
+  top: 40vh;
+  z-index: 300;
+  color: white;
+  cursor: pointer;
+}
+
+.img-btn-next {
+  right: 0;
+}
+
+.img-btn-next:hover,
+.img-btn-prev:hover {
+  background-color: gray;
+  transition: all 0.1s ease-in-out;
+}
+
+
+
+
+@media (min-width: 1020px) {
+  .service-cell:nth-child(n + 5) {
+    position: relative;
+    top: -70px;
+  }
+}
